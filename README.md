@@ -1,9 +1,6 @@
-<br />
+<h1>RLTextField</h1>
 <p>
-  <h1>RLTextField</h1>
-  <p>
-    An iOS TextField view which mimics the Riot Launcher's textfield look & feel.
-  </p>
+  An iOS TextField view which mimics the Riot Launcher's textfield look & feel.
 </p>
 
 ![screenshot1](https://user-images.githubusercontent.com/18121897/76358454-d8aacf00-62ef-11ea-9cc7-ecffeea0b20f.gif)
@@ -19,7 +16,9 @@
 <!-- GETTING STARTED -->
 ## Installation
 
-Use Swift Package Manager (SPM) to install this dependency into your iOS project. In Xcode, go to File->Swift Packages->Add Package Dependency and paste the following dependency URL into the search bar:
+Use Swift Package Manager (SPM) to install this dependency into your iOS project. 
+
+In Xcode, go to File->Swift Packages->Add Package Dependency and paste the following dependency URL into the search bar:
 
 ```sh
 https://github.com/thecht/RLTextField.git
