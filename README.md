@@ -18,7 +18,6 @@
   * [How to: Hide Input](#to-hide-input)
   * [How to: Dismiss Keyboard](#to-dismiss-keyboard)
   * [How to: Manage Colors](#to-manage-colors)
-  * [How to: Hide Input](#to-hide-input)
 * [License](#license)
 
 <!-- GETTING STARTED -->
