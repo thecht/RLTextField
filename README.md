@@ -42,7 +42,15 @@ import RLTextField
 ```sh
 var newTextField = RLTextField(placeholderText: "USERNAME")
 parentView.addSubview(newTextField)
-NSLayoutConstraint.activate([*insert constraints here*])
+
+// Using frame setting
+newTextField.frame = CGRect(x: 100, y: 100, width: 100, height: 60)
+
+// Using autolayout constraints
+newTextField.translatesAutoresizingMaskIntoConstraints = false
+NSLayoutConstraint.activate([
+  // insert constraints here...
+])
 ```
 
 #### To add validation:
@@ -142,4 +150,4 @@ RLTextField exposes all of its color properties, which can be set however you li
 
 ## License
 
-Coming Soon
+MIT License
