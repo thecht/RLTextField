@@ -154,7 +154,6 @@ public class RLTextField: UIView {
     // MARK: Object Creation
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        translatesAutoresizingMaskIntoConstraints = false
         
         configure()
         configureAnimationHelper()
