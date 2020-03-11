@@ -11,6 +11,14 @@
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
+  * [How to: Import](#to-import)
+  * [How to: Add](#to-add)
+  * [How to: Add Validation](#to-add-validation)
+  * [How to: Disable Validation](#to-disable-validation)
+  * [How to: Hide Input](#to-hide-input)
+  * [How to: Dismiss Keyboard](#to-dismiss-keyboard)
+  * [How to: Manage Colors](#to-manage-colors)
+  * [How to: Hide Input](#to-hide-input)
 * [License](#license)
 
 <!-- GETTING STARTED -->
@@ -39,6 +47,7 @@ NSLayoutConstraint.activate([*insert constraints here*])
 ```
 
 #### To add validation:
+
 ```sh
 newTextField.addValidation(errorMessage: "Requires 4+ Characters") { (input) -> Bool in
   if input.count >= 4 {
@@ -49,11 +58,35 @@ newTextField.addValidation(errorMessage: "Requires 4+ Characters") { (input) -> 
 }
 ```
 
+To change colors on successful input, set enableSuccessColors to true. 
+
+```sh
+myTextField.enableSuccessColors = true
+```
+
+Note that error colors will be activated automatically if a validation handler is added and incorrect user input is entered. (NOTE: To change success/error colors, see 'managing colors' below.)
+
+#### To disable validation:
+
+By default, validation will only happen if you add validation handlers to your RLTextField. (See 'To add validation' above). If you want to enable/disable validation, set the useValidation property.
+
+```sh
+newTextField.useValidation = false
+```
+
+#### To hide input:
+
+To hide user input (in case of passwords), enable the isSecureTextEntry property.
+
+```sh
+newTextField.isSecureTextEntry = true
+```
+
 #### To dismiss keyboard:
 
 RLTextField has a UITextFieldDelegate property, allowing you to respond to text field events just like a normal UITextField.
 
-To dismiss the keyboard, set the RLTextField's delegate property to an object which implements UITextFieldDelegate, and call the text field's endEditing() method in delegate methods like textFieldShouldReturn or textFieldDidEndEditing. 
+To dismiss the keyboard, set the RLTextField's delegate property to an object which implements UITextFieldDelegate, and call the RLTextField's endEditing() method in delegate methods like textFieldShouldReturn or textFieldDidEndEditing. 
 
 ```sh
 newTextField.delegate = SomeUITextFieldDelegateClass()
@@ -93,6 +126,20 @@ extension SomeUITextFieldDelegateClass: UITextFieldDelegate {
   }
 }
 ```
+
+#### To manage colors:
+
+RLTextField exposes all of its color properties, which can be set however you like.
+
+* primaryBorderColor
+* secondaryBorderColor
+* errorColor
+* successColor
+* primaryBackgroundColor
+* secondaryBackgroundColor
+* primaryTextColor
+* secondaryTextColor
+* cancelButtonColor
 
 ## License
 
